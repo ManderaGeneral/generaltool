@@ -2,7 +2,6 @@ from typing import Literal, Optional, get_args, get_origin, Dict, Union
 import inspect
 from itertools import chain
 
-
 def _get_parameters():
     frame = inspect.stack()[2].frame
     *_, parameters = inspect.getargvalues(frame)

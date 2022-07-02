@@ -19,7 +19,7 @@ setup(
     install_requires=[],
     url="https://github.com/ManderaGeneral/generaltool",
     license="mit",
-    python_requires=">=3.7, <3.11",
+    python_requires=">=3.8, <3.11",
     packages=find_namespace_packages(exclude=("build*", "dist*")),
     extras_require={},
     classifiers=[
