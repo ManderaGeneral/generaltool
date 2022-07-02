@@ -3,8 +3,6 @@ import inspect
 from itertools import chain
 
 
-from generallibrary import flatten
-
 def _get_parameters():
     frame = inspect.stack()[2].frame
     *_, parameters = inspect.getargvalues(frame)
