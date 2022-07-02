@@ -1,5 +1,5 @@
 from unittest import TestCase
-from generaltool import enforce_literals, Literal, Optional
+from generaltool import enforce_literals, Literal
 
 class TestLiteral(TestCase):
     def test_without(self):

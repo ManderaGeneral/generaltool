@@ -20,4 +20,4 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Unittest
-        run: python -m unittest discover test
+        run: python -m unittest discover
