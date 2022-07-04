@@ -47,12 +47,21 @@ def enforce_typing(function):
                 raise TypeError(f"'{arg}' failed annotation of {annotations}")
 
 
+def _check_value_to_literal(literal, value):
+    args = get_args(literal)
+    for arg in args:
+        if type(arg).__name__.startswith("typing."):
+            raise UserWarning(f"enforce_literals does not support nested Literals in 3.8 or before. ({literal})")
+        if arg == value:
+            return
+    raise AssertionError(f"'{value}' is invalid - valid options are {args}")
+
+
 def enforce_literals(function):
     frame = inspect.stack()[1].frame
     *_, parameters = inspect.getargvalues(frame)
     for name, literal in function.__annotations__.items():
         if get_origin(literal) is Literal and name in parameters:
-            value = parameters[name]
-            assert value in get_args(literal), f"'{value}' is invalid - valid options are {get_args(literal)}"
+            _check_value_to_literal(literal, parameters[name])
 
 

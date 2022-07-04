@@ -78,11 +78,20 @@ class TestLiteral(TestCase):
         self.assertRaises(AssertionError, x, "0")
         self.assertRaises(AssertionError, x, "")
 
-    def test_nested(self):
-        def x(a: Literal[Literal["foo"]]):
-            enforce_literals(x)
-            return a
-
-        self.assertEqual("foo", x("foo"))
-        self.assertRaises(AssertionError, x, "bar")
-        self.assertRaises(AssertionError, x, "foos")
+    # def test_nested_2(self):
+    #     def x(a: Literal[Literal["foo"]]):
+    #         enforce_literals(x)
+    #         return a
+    #
+    #     self.assertEqual("foo", x("foo"))
+    #     self.assertRaises(AssertionError, x, "bar")
+    #     self.assertRaises(AssertionError, x, "foos")
+    #
+    # def test_nested_3(self):
+    #     def x(a: Literal[Literal[Literal["foo"]]]):
+    #         enforce_literals(x)
+    #         return a
+    #
+    #     self.assertEqual("foo", x("foo"))
+    #     self.assertRaises(AssertionError, x, "bar")
+    #     self.assertRaises(AssertionError, x, "foos")
