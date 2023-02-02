@@ -1,0 +1,13 @@
+{
+    "install_requires": [],
+    "extras_require": {},
+    "enabled": true,
+    "private": false,
+    "name": "generaltool",
+    "target": "python",
+    "version": "0.1.0",
+    "description": "Library code with no dependencies.",
+    "topics": [],
+    "manifest": [],
+    "contribute": true
+}

@@ -1,1 +1,1 @@
-from generaltool.literal import Literal, enforce_literals
+from generaltool.enforce_literal import Literal, enforce_literals

@@ -19,6 +19,16 @@ class TestLiteral(TestCase):
         self.assertEqual(2, x(2))
         self.assertRaises(AssertionError, x, 3)
 
+    def test_class(self):
+        class X:
+            def x(self, foo: Literal[1, 2]):
+                enforce_literals(X.x)
+                return foo
+
+        self.assertEqual(1, X().x(1))
+        self.assertEqual(2, X().x(2))
+        self.assertRaises(AssertionError, X().x, 3)
+
     def test_two(self):
         def x(a: Literal[1, 2], b: Literal["foo"]):
             enforce_literals(x)
@@ -78,20 +88,35 @@ class TestLiteral(TestCase):
         self.assertRaises(AssertionError, x, "0")
         self.assertRaises(AssertionError, x, "")
 
-    # def test_nested_2(self):
-    #     def x(a: Literal[Literal["foo"]]):
-    #         enforce_literals(x)
-    #         return a
-    #
-    #     self.assertEqual("foo", x("foo"))
-    #     self.assertRaises(AssertionError, x, "bar")
-    #     self.assertRaises(AssertionError, x, "foos")
-    #
-    # def test_nested_3(self):
-    #     def x(a: Literal[Literal[Literal["foo"]]]):
-    #         enforce_literals(x)
-    #         return a
-    #
-    #     self.assertEqual("foo", x("foo"))
-    #     self.assertRaises(AssertionError, x, "bar")
-    #     self.assertRaises(AssertionError, x, "foos")
+    def test_return_type_hint(self):
+        def x(foo: Literal[1, 2]) -> int:
+            enforce_literals(x)
+            return foo
+
+        self.assertEqual(1, x(1))
+        self.assertEqual(2, x(2))
+        self.assertRaises(AssertionError, x, 3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
