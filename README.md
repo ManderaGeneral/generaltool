@@ -23,12 +23,12 @@ Library code with no dependencies.
 ```mermaid
 flowchart LR
 3([file]) --> 5([packager])
-1([tool]) --> 2([library])
 0([import]) --> 2([library])
-2([library]) --> 5([packager])
 2([library]) --> 3([file])
-0([import]) --> 3([file])
+2([library]) --> 5([packager])
 2([library]) --> 4([vector])
+0([import]) --> 3([file])
+1([tool]) --> 2([library])
 click 0 "https://github.com/ManderaGeneral/generalimport"
 click 1 "https://github.com/ManderaGeneral/generaltool"
 click 2 "https://github.com/ManderaGeneral/generallibrary"
@@ -78,7 +78,7 @@ Issue-creation, discussions and pull requests are most welcome!
 
 
 <sup>
-Generated 2023-03-20 04:00 CET for commit <a href='https://github.com/ManderaGeneral/generaltool/commit/master'>master</a>.
+Generated 2023-03-22 01:21 CET for commit <a href='https://github.com/ManderaGeneral/generaltool/commit/master'>master</a>.
 </sup>
 </details>
 
