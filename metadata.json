@@ -9,5 +9,5 @@
     "description": "Library code with no dependencies.",
     "topics": [],
     "manifest": [],
-    "contribute": false
+    "contribute": true
 }
