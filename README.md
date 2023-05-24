@@ -22,12 +22,12 @@ Library code with no dependencies.
 
 ```mermaid
 flowchart LR
-3([file]) --> 5([packager])
+1([tool]) --> 2([library])
 2([library]) --> 4([vector])
 2([library]) --> 5([packager])
-1([tool]) --> 2([library])
 2([library]) --> 3([file])
 0([import]) --> 3([file])
+3([file]) --> 5([packager])
 0([import]) --> 2([library])
 click 0 "https://github.com/ManderaGeneral/generalimport"
 click 1 "https://github.com/ManderaGeneral/generaltool"
@@ -52,9 +52,9 @@ style 1 fill:#482
 <details open>
 <summary><h2>Information</h2></summary>
 
-| Package                                                      | Ver                                            | Latest Release       | Python                                                                                                                                                                                                                                                 | Platform        | Cover   |
-|:-------------------------------------------------------------|:-----------------------------------------------|:---------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------|:--------|
-| [generaltool](https://github.com/ManderaGeneral/generaltool) | [0.1.0](https://pypi.org/project/generaltool/) | 2023-02-02 13:29 CET | [3.8](https://www.python.org/downloads/release/python-380/), [3.9](https://www.python.org/downloads/release/python-390/), [3.10](https://www.python.org/downloads/release/python-3100/), [3.11](https://www.python.org/downloads/release/python-3110/) | Windows, Ubuntu | 99.1 %  |
+| Package                                                      | Ver                                            | Latest Release        | Python                                                                                                                                                                                                                                                 | Platform        | Cover   |
+|:-------------------------------------------------------------|:-----------------------------------------------|:----------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------|:--------|
+| [generaltool](https://github.com/ManderaGeneral/generaltool) | [0.1.1](https://pypi.org/project/generaltool/) | 2023-05-24 09:26 CEST | [3.8](https://www.python.org/downloads/release/python-380/), [3.9](https://www.python.org/downloads/release/python-390/), [3.10](https://www.python.org/downloads/release/python-3100/), [3.11](https://www.python.org/downloads/release/python-3110/) | Windows, Ubuntu | 99.1 %  |
 </details>
 
 
@@ -78,7 +78,7 @@ Issue-creation, discussions and pull requests are most welcome!
 
 
 <sup>
-Generated 2023-05-16 07:41 CEST for commit <a href='https://github.com/ManderaGeneral/generaltool/commit/master'>master</a>.
+Generated 2023-05-24 09:26 CEST for commit <a href='https://github.com/ManderaGeneral/generaltool/commit/master'>master</a>.
 </sup>
 </details>
 
