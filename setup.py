@@ -11,7 +11,7 @@ setup(
     name="generaltool",
     author='Rickard "Mandera" Abraham',
     author_email="rickard.abraham@gmail.com",
-    version="0.1.0",
+    version="0.1.1",
     description="Library code with no dependencies.",
     long_description=long_description,
     long_description_content_type="text/markdown",
