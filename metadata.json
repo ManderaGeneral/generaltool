@@ -5,7 +5,7 @@
     "enabled": true,
     "private": false,
     "name": "generaltool",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "Library code with no dependencies.",
     "topics": [],
     "manifest": [],
